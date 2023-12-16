@@ -583,7 +583,7 @@ open class YoutubeDL: NSObject {
         }
 
         print(#function, url)
-        let info = try pythonObject.extract_info.throwing.dynamicallyCall(withKeywordArguments: ["": url.absoluteString, "download": false, "process": true])
+        let info = try pythonObject.extract_info.throwing.dynamicallyCall(withKeywordArguments: ["": url.absoluteString, "download": false, "process": true, "-vU"])
         print(info)
 //        print(#function, "throttled:", pythonObject.throttled)
         
